@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="eternalzzx@gmail.com">
+        <meta name="description" content="拾光镇服务器官方网站">
+        <meta name="keywords" content="Minecraft,我的世界,我的世界服务器,拾光镇,MMS">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="renderer" content="webkit">
+        <title>拾光镇-Memory Minecraft Server</title>
+        <link rel="icon" href="/images/server-logo-sm.ico" type="image/x-ico">
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bootstrap/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/x0popup.min.css">
+		<link rel="stylesheet" href="/css/loader.css">
+		<link rel="stylesheet" href="/css/layout.css">
+        <script src="/js/jquery-3.1.1.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/x0popup.min.js"></script>
+    </head>
+    <body>
+		<div id="loader"></div>
+		<header id="header">
+            <div>
+                <a class="logo-a" href=".">
+                    <img src="/images/server-logo.png">
+                </a>
+                <div class="group-div">
+                    <a class="btn-a to-top"><i class="fa fa-home"></i> 主页</a>
+					<a class="btn-a"><i class="fa fa-th-large"></i> 画廊</a>
+                    <a class="btn-a"><i class="fa fa-download"></i> 下载</a>
+                    <a class="btn-a"><i class="fa fa-comments"></i> 博客</a>
+                </div>
+            </div>
+        </header>
+        <div class="fix-header">
+            <a class="logo-a" href=".">
+                <img src="/images/server-logo.png">
+            </a>
+            <div class="group-div">
+                <a class="btn-a to-top"><i class="fa fa-home"></i> 主页</a>
+                <a class="btn-a"><i class="fa fa-th-large"></i> 画廊</a>
+                <a class="btn-a"><i class="fa fa-download"></i> 下载</a>
+                <a class="btn-a"><i class="fa fa-comments"></i> 博客</a>
+            </div>
+        </div>
+        <div class="page-container">
+            <div id="section-1">
+                <div class="section-bg"></div>
+                <div class="left-text left-form">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="mcnick-input" class="control-label">用户名</label>
+                            <input type="text" class="form-control" id="mcnick-input" placeholder="请输入MC正版用户名" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="code-input" class="control-label">邀请码</label>
+                            <input type="text" class="form-control" id="code-input" placeholder="请输入20位服务器邀请码" maxlength="24">
+                        </div>
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <a id="registe-btn" class="btn-a btn-circle" title="获取服务器白名单">注册</a>
+                                </div>
+                                <div class="back">
+                                    <a id="count-btn" class="btn-a btn-circle btn-count" title="请稍后再试...">10</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-div">
+                    <div class="text-div">
+                        <h2>入住拾光镇</h2>
+                        <div id="text-carousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <p>简易的Minecraft联机平台, 体验原汁原味的Minecraft. 拾光镇为喜欢纯净生存或纯净创造的玩家提供稳定温馨的小型服务器.</p>
+                                    <p>入服邀请码通过不同渠道不定期发放 敬请期待</p>
+                                </div>
+                                <div class="item">
+                                    <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygfua3r0j20de0dl405.jpg">
+                                    <p class="center">QQ群:148775649</p>
+                                </div>
+                            </div>
+                            <a class="carousel-control left" href="#text-carousel" data-slide="prev">
+                                <i class="fa fa-arrow-circle-left"></i>
+                            </a>
+                            <a class="carousel-control right" href="#text-carousel" data-slide="next">
+                                <i class="fa fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-2">
+                <div  class="section-bg"></div>
+                <div class="left-div">
+                    <div class="text-div">
+                        <h2>服务器信息</h2>
+                        <dl>
+                            <dt>服务器版本</dt>
+                            <dd>1.10.2</dd>
+                            <dd>纯净原版</dd>
+                            <dt>服务器地址</dt>
+                            <dd>eternalzzx.site</dd>
+                            <dd>-</dd>
+                            <dt>正版验证</dt>
+                            <dd><i class="fa fa-circle on-i"></i> 开启</dd>
+                            <dd>正版登录</dd>
+                            <dt>白名单</dt>
+                            <dd><i class="fa fa-circle on-i"></i> 开启</dd>
+                            <dd>网站邀请码注册</dd>
+                            <dt>邀请码状态</dt>
+                            <dd><i class="fa fa-circle on-i"></i> 发放中</dd>
+                            <dd>
+                                <div id="get-code" class="btn-div">
+                                    <div class="btn-progress"></div>
+                                    <a class="btn-a btn-table">获取邀请码</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div> 
+                </div>
+                <div class="right-text img-div">
+                    <img src="http://ww4.sinaimg.cn/large/69be9abejw1fayggf7tv0j21hc0u0qn0.jpg">
+                </div>
+            </div>
+            <div id="section-3">
+                <div  class="section-bg"></div>
+                <div class="left-text img-div">
+                    <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygg9j052j21hc0u0tlm.jpg">
+                </div>
+                <div class="right-div">
+                    <div class="text-div">
+                        <h2>我的世界</h2>
+                        <p>Minecraft是一款沙盒式建造游戏，缔造者为Mojang AB创始人马库斯•泊松，其灵感源于无尽矿工、矮人要塞和地城守护者. 玩家可以在多人服务器与单人世界中体验不同的游戏模式，打造精妙绝伦的建筑物，创造物和艺术品. </p>
+                    </div> 
+                </div> 	
+            </div>
+            <div id="section-4">
+                <div  class="section-bg"></div>
+                <div class="left-div">
+                    <div class="text-div">
+                        <h2>游戏提示</h2>
+                        <p>
+                            <i class="fa fa-circle"></i> 
+                            游戏中死亡物品掉落，可以使用/back返回拾取
+                            <br>
+                            <i class="fa fa-circle"></i> 游戏中金币很容易获取，甚至泥土都可在主城变卖
+                            <br>
+                            <i class="fa fa-circle"></i> 
+                            游戏中传送会扣除金币，但领地传送和/spawn不会
+                            <br>
+                            <i class="fa fa-circle"></i> 
+                            游戏中绿宝石和金币在主城是等价兑换的 1:$50
+                            <br>
+                            <i class="fa fa-circle"></i> 
+                            游戏中在主城使用2000金币就可以传送到创造世界
+                        </p>
+                    </div> 
+                </div> 
+                <div class="right-text">
+                    <h2>留言板</h2>
+                    <textarea id="suggestion-textarea" class="tran-textarea" placeholder="留下您对服务器的建议..." maxlength="1000"></textarea>
+                    <a id="submit-btn" class="btn-a btn-cube" title="提交留言">提交</a>
+                </div>	
+            </div>
+        </div>
+        <footer></footer>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
