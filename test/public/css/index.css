@@ -1,0 +1,231 @@
+.page-container>div {
+    position: relative;
+    height: 600px;
+    margin: 0 15px;
+}
+
+.page-container .section-bg {
+    height: 100%;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4; 
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#section-1 {
+    border-radius: 3px 3px 0 0;
+    background-color: #00599a;
+}
+
+#section-1 .section-bg {
+    border-radius: 3px 3px 0 0;
+    background-image: url('http://ww4.sinaimg.cn/large/69be9abejw1faygg9j052j21hc0u0tlm.jpg');
+    background-position: 30% 60%;
+}
+
+#section-1 .text-div h2 {
+    color: #00599a;
+}
+
+#section-2 {
+    background-color: #882f33;
+}
+
+#section-2 .section-bg {
+    background-image: url('http://ww4.sinaimg.cn/large/69be9abejw1fayggf7tv0j21hc0u0qn0.jpg');
+    background-position: 30% 40%;
+}
+
+#section-2 .text-div h2 {
+    color: #882f33;
+}
+
+#section-3 {
+    background-color: #333333;
+}
+
+#section-3 .section-bg {
+    background-image: url('http://ww1.sinaimg.cn/large/69be9abejw1fayggkpmd7j21hc0u07rr.jpg');
+    background-position: 30% 50%;
+}
+
+#section-3 .text-div h2 {
+    color: #333333;
+}
+
+#section-4 {
+    background-color: #2A8885;
+}
+
+#section-4 .section-bg {
+    background-image: url('http://ww4.sinaimg.cn/large/69be9abejw1faygg5tol7j21hc0u01cf.jpg');
+    background-position: 20% 40%;
+}
+
+#section-4 .text-div h2 {
+    color: #2A8885;
+}
+
+.left-div {
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    height: 540px;
+    width: 50%;
+    max-width: 700px;
+    border-radius: 0 50% 50% 0;
+    background-color: #fff;
+}
+
+.right-div {
+    position: absolute;
+    right: -1px;
+    top: 30px;
+    height: 540px;
+    width: 50%;
+    max-width: 700px;
+    border-radius: 50% 0 0 50%;
+    background-color: #fff;
+}
+
+.left-text {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    width: 40%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 2;
+    transition: all 0.2s linear;
+}
+
+.right-text {
+    position: absolute;
+    right: 5%;
+    top: 22%;
+    width: 40%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 2;
+    transition: all 0.2s linear;
+}
+
+.left-form {
+    top: 28%;
+}
+
+.img-div {
+    top: 28%;
+    border: 5px solid #fff;
+    border-radius: 3px;
+}
+
+.right-text.img-div:hover {
+    right: 2%;
+    width: 46%;
+    top: 26%;
+    transition: all 0.2s ease-in-out;
+}
+
+.left-text.img-div:hover {
+    left: 2%;
+    width: 46%;
+    top: 26%;
+    transition: all 0.2s ease-in-out;
+}
+
+.text-div {
+    width: 80%;
+    padding: 130px 20px 8px 40px;
+}
+
+.lift-div .text-div {
+    float: left;
+}
+
+.right-div .text-div {
+    float: right;
+}
+
+.text-div p {
+    color: #0e6e6d;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.left-form .form-horizontal {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.left-form .form-group {
+    margin:10px;
+}
+
+.form-horizontal .control-label {
+    width: 80px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#code-input {
+    text-transform: uppercase;
+}
+
+.text-div .carousel-control {
+    top: -26px;
+    right: 55px;
+    left: auto;
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.text-div .carousel-control.right {
+    right: 5px;
+    left: auto;
+}
+
+.text-div .carousel-inner img {
+    width: 185px;
+    margin: auto;
+}
+
+.tran-textarea {
+    float: right;
+    width: 95%;
+    height: 150px;
+    margin: 5px;
+    border-color: #fff;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.25);
+    resize: none;
+}
+
+.tran-textarea::-moz-placeholder{color:#eee;}
+.tran-textarea::-webkit-input-placeholder{color:#eee;}
+.tran-textarea:-ms-input-placeholder{color:#eee;}
+
+@media screen and (max-width: 1185px) {
+    .text-div {
+        width: 95%;
+        padding: 130px 20px 8px 20px;
+    }
+
+    .right-div .text-div {
+        width: 80%;
+    }
+
+    .img-div {
+        top: 33%;
+    }
+
+    .right-text.img-div:hover,
+    .left-text.img-div:hover {
+        top: 29%;
+    }
+}

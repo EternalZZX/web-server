@@ -141,12 +141,4 @@ $(function(){
     });
 
     console.log("%c欢迎各位前后台高手提出建议 QQ:1301340187", "color: #ddd");
-}); 
-
-function openloading(){
-    $("#loader").addClass("loader loader-default is-active");
-}
-
-function closeloading(){
-    $("#loader").removeClass("loader loader-default is-active");
-}
+});
