@@ -4,7 +4,7 @@
 <meta name="keywords" content="Minecraft,我的世界,我的世界服务器,拾光镇,MMS">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
-<title><%= title %></title>
+<title>拾光镇-Memory Minecraft Server</title>
 <link rel="icon" href="/images/server-logo-sm.ico" type="image/x-ico">
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/bootstrap/css/font-awesome.min.css">
