@@ -1,3 +1,13 @@
+dl {
+    width: 420px;
+}
+
+dt,dd {
+    float: left;
+    width: 100px;
+    padding: 8px;
+}
+
 .page-container>div {
     position: relative;
     height: 600px;

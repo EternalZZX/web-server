@@ -16,16 +16,6 @@ a:hover {
 	text-decoration: none;
 }
 
-dl {
-    width: 420px;
-}
-
-dt,dd {
-    float: left;
-    width: 100px;
-    padding: 8px;
-}
-
 i.on-i {
     color: #a9ff00;
 }
