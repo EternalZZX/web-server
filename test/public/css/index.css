@@ -186,13 +186,13 @@ dt,dd {
 }
 
 .text-div .carousel-control {
-    top: -26px;
-    right: 55px;
+    top: -27px;
+    right: 50px;
     left: auto;
-    width: 30px;
-    height: 30px;
-    font-size: 28px;
-    line-height: 32px;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    color: #333;
 }
 
 .text-div .carousel-control.right {
