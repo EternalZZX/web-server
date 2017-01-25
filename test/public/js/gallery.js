@@ -13,8 +13,6 @@ $(function(){
         $('#gallery-div dl').css("z-index", "0");
         $(this).css("z-index","1");
     });
-
-    $("#gallery-modal").modal();
 });
 
 function galleryInit(){

@@ -71,21 +71,24 @@ p {
 
 .fb-touch {
     background-position: 0 0;
+    cursor: pointer;
 }
 
-.tweet-touch {
+.gallery-touch {
     background-position: -35px 0;
+    cursor: pointer;
 }
 
 .linkedin-touch {
     background-position: -71px 0;
+    cursor: pointer;
 }
 
 .icon-colored .fb-touch {
     background-position: 0 -27px;
 }
 
-.icon-colored .tweet-touch {
+.icon-colored .gallery-touch {
     background-position: -35px -27px;
 }
 
