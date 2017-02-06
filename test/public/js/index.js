@@ -69,6 +69,8 @@ $(function(){
                             x0p('注册失败', '该邀请码已被使用!', 'error', false);
                         } else if (data == "3") {
                             x0p('注册失败', '邀请码输入错误!', 'error', false);
+                        } else if (data == "4") {
+                            x0p('注册失败', '请确保用户名为正版游戏昵称，Mojang网络延迟或导致添加失败，请稍后再试或联系服主!', 'error', false);
                         } else {
 							x0p('注册失败', '请勿使用非法字符!', 'error', false);
 						}

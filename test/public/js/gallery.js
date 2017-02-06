@@ -9,9 +9,15 @@ $(function(){
 
     galleryInit();
 
-    $('#gallery-div dl').mousedown(function(e){
+    $('#gallery-div dl').mousedown(function(event) {
         $('#gallery-div dl').css("z-index", "0");
         $(this).css("z-index","1");
+    });
+
+    $('#gallery-carousel').carousel('pause');
+
+    $("a.gallery-touch").click(function(event) {
+        /* Act on the event */
     });
 });
 

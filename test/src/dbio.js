@@ -1,9 +1,12 @@
 var mysql = require('mysql');
+var rf = require('fs'); 
 var exec = require('child_process').exec;
 var $config = require('../setting/config.js');
 var $crud = require('../src/crud.js');
 var $base = require('../src/base.js');
-var cmdStr = '/home/server/addWhitelist ';
+
+var ADD_WHITELIST_CMD = '/home/zhangzongxiang/addWhitelist ';//'/home/server/addWhitelist ',
+	SERVER_PATH = '/home/zhangzongxiang/';//'/home/server/mcserver/';
 
 var pool = mysql.createPool($config.mysql);
 
@@ -57,23 +60,38 @@ module.exports = {
 									res.send("3");
 								} else {
 									if (result[0].status == 1 || result[0].status == 0) {
-										exec(cmdStr + req.body.mcnick, function(err,stdout,stderr) {
+										exec(ADD_WHITELIST_CMD + req.body.mcnick, function(err, stdout, stderr) {
 											if (err) {
 												console.log('add whitelist ' + req.body.mcnick + ' error: ' + stderr);
 												res.send("-1");
 											} else {
-												connection.query($crud.insertwhitelist, [req.body.mcnick, code], function(err, result) {
-													if (!result) {
-														console.log("SQL insert whitelist " + req.body.mcnick + ' error: ' + err);
-													}
+												rf.readFile(SERVER_PATH + "whitelist.json", 'utf-8', function(err,data) {  
+												    if (err) {  
+												        console.log('read whitelist file error: ' + err);
+												        res.send("-1"); 
+												    } else { 
+												    	var whitelist = JSON.parse(data);
+												        for (i in whitelist) {
+												        	if (whitelist[i].name == req.body.mcnick) {
+												        		connection.query($crud.insertwhitelist, [req.body.mcnick, code], function(err, result) {
+																	if (!result) {
+																		console.log("SQL insert whitelist " + req.body.mcnick + ' error: ' + err);
+																	}
+																});
+																connection.query($crud.usedinvitecode, [code], function(err, result) {
+																	if(!result) {
+																		console.log("SQL change invite code " + code + " status error: " + err);
+																	}
+																});
+																console.log('add whitelist ' + req.body.mcnick + ' finish!');
+																res.send("1");
+																return;
+												        	}
+												        }
+												        console.log('add whitelist ' + req.body.mcnick + ' with network delay!');
+														res.send("4");
+												    }  
 												});
-												connection.query($crud.usedinvitecode, [code], function(err, result) {
-													if(!result) {
-														console.log("SQL change invite code " + code + " status error: " + err);
-													}
-												});
-												console.log('add whitelist ' + req.body.mcnick + 'finish!');
-												res.send("1");
 											}
 										});
 									} else {
