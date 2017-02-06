@@ -5,8 +5,8 @@ var $config = require('../setting/config.js');
 var $crud = require('../src/crud.js');
 var $base = require('../src/base.js');
 
-var ADD_WHITELIST_CMD = '/home/zhangzongxiang/addWhitelist ';//'/home/server/addWhitelist ',
-	SERVER_PATH = '/home/zhangzongxiang/';//'/home/server/mcserver/';
+var ADD_WHITELIST_CMD = '/home/server/addWhitelist ',
+	SERVER_PATH = '/home/server/mcserver/';
 
 var pool = mysql.createPool($config.mysql);
 
