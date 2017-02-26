@@ -5,8 +5,8 @@ var $config = require('../setting/config.js');
 var $crud = require('../src/crud.js');
 var $base = require('../src/base.js');
 
-var ADD_WHITELIST_CMD = '/home/zhangzongxiang/addWhitelist ';//'/home/server/addWhitelist ',
-	SERVER_PATH = '/home/zhangzongxiang/';//'/home/server/mcserver/';
+var ADD_WHITELIST_CMD = '/home/server/addWhitelist ',
+	SERVER_PATH = '/home/server/mcserver/';
 
 var pool = mysql.createPool($config.mysql);
 
@@ -72,7 +72,7 @@ module.exports = {
 												    } else { 
 												    	var whitelist = JSON.parse(data);
 												        for (i in whitelist) {
-												        	if (whitelist[i].name == req.body.mcnick) {
+												        	if (whitelist[i].name.toLowerCase() == req.body.mcnick.toLowerCase()) {
 												        		connection.query($crud.insertwhitelist, [req.body.mcnick, code], function(err, result) {
 																	if (!result) {
 																		console.log("SQL insert whitelist " + req.body.mcnick + ' error: ' + err);
