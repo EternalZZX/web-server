@@ -24,6 +24,10 @@ router.post('/suggestion', function(req, res, next) {
 	$dbio.suggest(req, res, next);
 });
 
+router.get('/gallerypic', function(req, res, next) {
+    $dbio.getGalleryPic(req, res, next);
+});
+
 router.get('*', function(req, res, next) {
 	res.send('404');
 });

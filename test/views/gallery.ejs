@@ -19,150 +19,26 @@
             </div>
         </div>
         <div id="gallery-div">
+            <% gallerys.forEach(function(gallery){ %>
             <dl>
                 <i class='hander fa fa-thumb-tack'></i>
                 <div class="single-member album">
                     <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygg9j052j21hc0u0tlm.jpg" alt="Member">
+                        <img src="<%= gallery.cover %>" alt="Member">
                     </div>
                     <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3><%= gallery.name %></h3>
+                        <h5><%= gallery.author %></h5>
+                        <p><%= gallery.discription %></p>
                         <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
+                            <a class="fb-touch"></a>
+                            <a class="gallery-touch" gallery-id="<%= gallery.id %>"></a>
+                            <a class="linkedin-touch"></a>
                         </div>
                     </div>
                 </div>
             </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1fayggf7tv0j21hc0u0qn0.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww1.sinaimg.cn/large/69be9abejw1fayggkpmd7j21hc0u07rr.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygg5tol7j21hc0u01cf.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygg9j052j21hc0u0tlm.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1fayggf7tv0j21hc0u0qn0.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww1.sinaimg.cn/large/69be9abejw1fayggkpmd7j21hc0u07rr.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
-            <dl>
-                <i class='hander fa fa-thumb-tack'></i>
-                <div class="single-member album">
-                    <div class="member-image">
-                        <img src="http://ww4.sinaimg.cn/large/69be9abejw1faygg5tol7j21hc0u01cf.jpg" alt="Member">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sophia</h3>
-                        <h5>ShowGilr</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="social-touch">
-                            <a class="fb-touch" href="#"></a>
-                            <a class="gallery-touch" data-toggle="modal" data-target="#gallery-modal"></a>
-                            <a class="linkedin-touch" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-            </dl>
+            <% })%>
         </div>
         <footer></footer>
 
@@ -190,8 +66,8 @@
                             </div>
                         </div>
                         <a class="carousel-control left" href="#gallery-carousel" data-slide="prev">
-                                <i class="fa fa-arrow-circle-left"></i>
-                            </a>
+                            <i class="fa fa-arrow-circle-left"></i>
+                        </a>
                         <a class="carousel-control right" href="#gallery-carousel" data-slide="next">
                             <i class="fa fa-arrow-circle-right"></i>
                         </a>

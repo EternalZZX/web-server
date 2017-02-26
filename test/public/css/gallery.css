@@ -122,6 +122,11 @@ p {
     transition: 0.4s;
 }
 
+.album .member-info p {
+    display: block;
+    height: 88px;
+}
+
 .album .member-image img {
     height: 100%;
     width: auto;

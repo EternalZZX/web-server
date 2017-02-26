@@ -299,4 +299,26 @@ header>div {
 	background-color: #fff;
 }
 
+footer {
+    height: 30px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #2c827f;
+    margin: 15px 15px 0px 15px;
+}
 
+footer p {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-size: 12px;
+    margin: 0;
+}
+
+footer a {
+    color: #fff; 
+}
+
+footer a:hover {
+    color: #ddd; 
+}
