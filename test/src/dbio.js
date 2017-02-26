@@ -212,5 +212,35 @@ module.exports = {
 				connection.release();
 			});
 		});
+	},
+
+	getGallery: function (req, res, next) {
+		pool.getConnection(function(err, connection) {
+			connection.query($crud.listgallery, function(err, result) {
+				if(result) {
+					res.render('gallery', { title: '拾光镇画廊-Memory Minecraft Server',
+											gallerys: result });
+				} else {
+					console.log('SQL list gallery error: ' + err);
+					res.send("404");
+				}
+				connection.release();
+			});
+		});  	
+	},
+
+	getGalleryPic: function (req, res, next) {
+		var id = parseInt(req.query.id);
+		pool.getConnection(function(err, connection) {
+			connection.query($crud.listgallerypic, [id], function(err, result) {
+				if(result) {
+					res.json(result);
+				} else {
+					console.log('SQL list gallery pic error: ' + err);
+					res.json({"status": "-1"});
+				}
+				connection.release();
+			});
+		}); 
 	}
 };

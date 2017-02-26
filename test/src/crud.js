@@ -1,8 +1,8 @@
 var crud = {
-    insert:'INSERT INTO user(name) VALUES(?)',
+	insert:'INSERT INTO user(name) VALUES(?)',
 	listwhitelist: 'SELECT * FROM whitelist',
 	searchwhitelist: 'SELECT mcnick FROM whitelist WHERE mcnick=?',
-	insertwhitelist: 'INSERT INTO whitelist(mcnick, invite_code, add_date) VALUE(?, ?, now())',
+	insertwhitelist: 'INSERT INTO whitelist(mcnick, invite_code, add_date) VALUES(?, ?, now())',
 	searchinvitecode: 'SELECT invite_code, status FROM code WHERE invite_code=?',
 	usedinvitecode: 'UPDATE code SET status=2, used_date=now() WHERE invite_code=?',
 	releaseinvitecode: 'UPDATE code SET status=1, release_date=now() WHERE invite_code=?',
@@ -10,7 +10,9 @@ var crud = {
 	insertinvitecode: 'INSERT INTO code(invite_code, status) VALUES(?, ?)',
 	searchip: 'SELECT ip FROM getIP WHERE ip=?',
 	insertip: 'INSERT INTO getIP(ip, time, operation) VALUES(?, now(), ?)',
-	insertsuggestion: 'INSERT INTO suggestion(ip, suggestion, time) VALUES(?, ?, now())'
+	insertsuggestion: 'INSERT INTO suggestion(ip, suggestion, time) VALUES(?, ?, now())',
+	listgallery: 'SELECT * FROM gallery',
+	listgallerypic: 'SELECT * FROM gallery_pic WHERE gallery_id=?'
 };
 
 module.exports = crud;
